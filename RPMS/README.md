@@ -15,11 +15,37 @@ $ for i in openresty-openssl111  openresty-pcre-8.45  openresty-zlib-1.2.13;do r
 
 ```sh
 $ cd openresty
-$ wget https://github.com/dongbo/rpmbuild/raw/main/RPMS/x86_64/openresty-1.19.9.1-1.dongbo.el7.x86_64.rpm
+$ wget https://github.com/hengeek/rpmbuild/blob/master/RPMS/x86_64/openresty-1.19.9.1-1.dongbo.el7.x86_64.rpm
 ```
 
 执行安装命令：
 
 ```sh
 $ yum localinstall -y *.rpm
+```
+
+## nginx-prometheus
+
+然后下载定制的包到nginx-prometheus目录下。
+```sh
+cd nginx-prometheus
+wget https://github.com/hengeek/rpmbuild/blob/master/RPMS/x86_64/nginx_exporter-0.9.0-1.dongbo.el7.x86_64.rpm
+```
+
+执行安装命令
+```sh
+yum localinstall -y nginx_exporter-0.9.0-1.dongbo.el7.x86_64.rpm
+```
+
+## node_exporter
+
+然后下载定制的包到nginx-prometheus目录下。
+```sh
+cd node-prometheus
+wget https://github.com/hengeek/rpmbuild/blob/master/RPMS/x86_64/node_exporter-1.2.2-1.dongbo.el7.x86_64.rpm
+```
+
+执行安装命令
+```sh
+yum localinstall -y nginx_exporter-0.9.0-1.dongbo.el7.x86_64.rpm
 ```
